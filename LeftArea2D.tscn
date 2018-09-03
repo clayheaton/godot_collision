@@ -1,14 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://LeftArea2D.gd" type="Script" id=1]
 [ext_resource path="res://RightArea2D.tscn" type="PackedScene" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[node name="LeftArea2D" type="Area2D"]
+[node name="LeftArea2D" type="Area2D" index="0"]
 
 position = Vector2( 170.899, 162.648 )
 input_pickable = true
@@ -26,10 +21,6 @@ __meta__ = {
 
 [node name="LeftSprite" type="Sprite" parent="." index="0"]
 
-[node name="LeftCollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
-shape = SubResource( 1 )
-
-[node name="RightArea2D" parent="." index="2" instance=ExtResource( 2 )]
+[node name="RightArea2D" parent="." index="1" instance=ExtResource( 2 )]
 
 
